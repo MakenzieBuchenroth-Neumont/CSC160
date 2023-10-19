@@ -17,6 +17,7 @@ namespace neko
 
         public void checkWin()
         {
+            // fix next line
             if (map.playerData[0] == map.treasureData[0] && map.playerData[1] == map.treasureData[1])
             {
                 end = true;
@@ -26,6 +27,7 @@ namespace neko
 
         public void checkLose()
         {
+            // fix next line
             if (map.playerData[0] == map.enemyData[0] && map.playerData[1] == map.enemyData[1])
             {
                 end = true;
