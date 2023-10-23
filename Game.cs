@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,23 +28,29 @@ namespace neko
 
         public void checkLose()
         {
-            // fix next line
-            if (map.playerData[0] == map.enemyData[0] && map.playerData[1] == map.enemyData[1])
-            {
+            if (map.checkLoss()) {
                 end = true;
                 win = false;
             }
+            
         }
 
         public void playGame()
         {
+            map.initMap();
+            player.initPlayer();
+            enemy.initEnemy();
             while (!end)
             {
                 map.printMap();
                 Console.WriteLine("Please presss the arrow key of the direction you want to go!");
-                player.Movement();
-                enemy.enemyMove();
+                player.Movement(map);
+                enemy.enemyMove(map);
+                map.init(player.playerPosX, player.playerPosY, enemy.enemyPosX, enemy.enemyPosY);
+                map.movePlayer();
+                map.moveEnemy();
                 checkWin();
+                checkLose();
             }
             if (end)
             {

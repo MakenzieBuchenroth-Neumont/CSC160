@@ -11,41 +11,50 @@ namespace neko
         public int playerPosX = 7;
         public int playerPosY = 8;
 
-        public void Movement()
+        public void initPlayer() {
+            playerPosX = 7;
+            playerPosY = 8;
+        }
+
+        public void Movement(Map map)
         {
             switch (Console.ReadKey().Key)
             {
                 case ConsoleKey.W:
                 case ConsoleKey.UpArrow:
-                    if (playerPosY == 1)
-                    {
+                    if (map.checkWall(playerPosX, playerPosY - 1, 0)) {
+                        playerPosY -= 1;
+                    }
+                    else { 
                         Console.WriteLine("Cannot move that way!");
                     }
-                    playerPosY -= 1;
                     break;
                 case ConsoleKey.S:
                 case ConsoleKey.DownArrow:
-                    if (playerPosY == 9)
-                    {
+                    if (map.checkWall(playerPosX, playerPosY + 1, 0)) {
+                        playerPosY += 1;
+                    }
+                    else {
                         Console.WriteLine("Cannot move that way!");
                     }
-                    playerPosY += 1;
                     break;
                 case ConsoleKey.A:
                 case ConsoleKey.LeftArrow:
-                    if (playerPosX == 1)
-                    {
+                    if (map.checkWall(playerPosX -1, playerPosY, 0)) {
+                        playerPosX -= 1;
+                    }
+                    else {
                         Console.WriteLine("Cannot move that way!");
                     }
-                    playerPosX -= 1;
                     break;
                 case ConsoleKey.D:
                 case ConsoleKey.RightArrow:
-                    if (playerPosX == 9)
-                    {
+                    if (map.checkWall(playerPosX + 1, playerPosY, 0)) {
+                        playerPosX += 1;
+                    }
+                    else {
                         Console.WriteLine("Cannot move that way!");
                     }
-                    playerPosX += 1;
                     break;
             }
         }

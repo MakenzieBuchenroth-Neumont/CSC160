@@ -10,41 +10,37 @@ namespace neko {
         public int enemyPosX = 1;
         public int enemyPosY = 3;
 
-        public void enemyMove()
+        Random random = new Random();
+
+        public void initEnemy() {
+            enemyPosX = 1;
+            enemyPosY = 3;
+        }
+
+        public void enemyMove(Map map)
         {
-            switch (Console.ReadKey().Key)
+            switch (random.Next(4))
             {
-                case ConsoleKey.W:
-                case ConsoleKey.UpArrow:
-                    if (enemyPosY == 9)
-                    {
-                        Console.WriteLine("Cannot move that way!");
+                case 0:
+                    if (map.checkWall(enemyPosX, enemyPosY - 1, 1)) {
+                        enemyPosY -= 1;
                     }
-                    enemyPosY -= 1;
                     break;
-                case ConsoleKey.S:
-                case ConsoleKey.DownArrow:
-                    if (enemyPosY == 1)
-                    {
-                        Console.WriteLine("Cannot move that way!");
+                case 1:
+                    if (map.checkWall(enemyPosX, enemyPosY + 1, 1)) {
+                        enemyPosY += 1;
                     }
-                    enemyPosY += 1;
                     break;
-                case ConsoleKey.A:
-                case ConsoleKey.LeftArrow:
-                    if (enemyPosX == 1)
-                    {
-                        Console.WriteLine("Cannot move that way!");
+                case 2:
+                    if (map.checkWall(enemyPosX - 1, enemyPosY, 1)) {
+                        enemyPosX -= 1;
                     }
-                    enemyPosX += 1;
                     break;
-                case ConsoleKey.D:
-                case ConsoleKey.RightArrow:
-                    if (enemyPosX == 9)
+                case 3:
+                    if (map.checkWall(enemyPosX + 1, enemyPosY, 1))
                     {
-                        Console.WriteLine("Cannot move that way!");
+                        enemyPosX += 1;
                     }
-                    enemyPosX -= 1;
                     break;
             }
         }

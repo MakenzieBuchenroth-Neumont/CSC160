@@ -24,7 +24,6 @@ namespace neko
                 int playingInputInt = Int32.Parse(playingInput);
                 if (playingInputInt == 1) {
                     game.end = false;
-                    playingValidInput = true;
                     Console.WriteLine("Please enter your name:");
                     string playerName = Console.ReadLine();
                     Console.WriteLine("Hello, " + playerName);
