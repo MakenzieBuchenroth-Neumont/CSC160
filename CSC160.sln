@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grab_the_treasure", "Grab_the_treasure.csproj", "{0D4C8F37-189C-4D51-914C-B8C0951BB96E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreakTheSafe", "..\BreakTheSafe\BreakTheSafe.csproj", "{F6993D44-CF86-42F6-A567-14D81739B0FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dungeons&Diners&Drive-Ins&Dragons&Dives", "..\Dungeons&Diners&Drive-Ins&Dragons&Dives\Dungeons&Diners&Drive-Ins&Dragons&Dives.csproj", "{EFD4B2E2-6B44-4691-99CD-466A157C9AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0D4C8F37-189C-4D51-914C-B8C0951BB96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4C8F37-189C-4D51-914C-B8C0951BB96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4C8F37-189C-4D51-914C-B8C0951BB96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6993D44-CF86-42F6-A567-14D81739B0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6993D44-CF86-42F6-A567-14D81739B0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6993D44-CF86-42F6-A567-14D81739B0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6993D44-CF86-42F6-A567-14D81739B0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD4B2E2-6B44-4691-99CD-466A157C9AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD4B2E2-6B44-4691-99CD-466A157C9AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD4B2E2-6B44-4691-99CD-466A157C9AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD4B2E2-6B44-4691-99CD-466A157C9AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
